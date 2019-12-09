@@ -136,11 +136,21 @@ layui.use(['form','layer','table','laytpl','jquery','upload'],function(){
 
     //列表操作
     table.on('tool(userList)', function(obj){
+        var checkStatus = table.checkStatus(obj.config.id)
+            // ,data = checkStatus.data; //获取选中的数据
         var layEvent = obj.event,
             data = obj.data;
+        // id =obj.id;
 
         if(layEvent === 'edit'){ //编辑
-            addUser(data);
+            if (data.length==0){
+                layer.msg('请选择一行');
+            }else if(data.length > 1){
+                layer.msg('只能同时编辑一个');
+            } else {
+                layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
+            }
+            // addUser(data);
         }else if(layEvent === 'usable'){ //启用禁用
             var _this = $(this),
                 usableText = "是否确定禁用此用户？",

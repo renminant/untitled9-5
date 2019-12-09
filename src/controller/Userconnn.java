@@ -146,11 +146,11 @@ public class Userconnn {
 //        }
 //        return map;
 //    }
-//    @RequestMapping("/updatetable.action")
-//    @ResponseBody
-//   public int updatetable(User user){
-//        return userDao.updatetable(user);
-//    }
+    @RequestMapping("/updatetable.action")
+    @ResponseBody
+   public int updatetable(User user){
+        return userDao.updatetable(user);
+    }
 //
 //
 

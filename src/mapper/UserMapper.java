@@ -20,18 +20,8 @@ public interface UserMapper {
 
     public int addUser(User user);
 
-//    public List<User> tablelayui();
-//
-//    public List<User> selectpage(HashMap map);
-//
-//    public Integer usercount();
-//
-//    public  int updatetable(User user);
-//
-//    public  int deleteUserByid(Integer user_id);
-//
-//    public User addUserPage(User user);
-//
+    public  int updatetable(User user);
+
 //    public int updatehead(User user);
 
 }

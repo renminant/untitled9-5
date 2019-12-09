@@ -34,10 +34,10 @@
     <!--<update id="updatehead" parameterType="User">-->
     <!--update user set headpath=#{headpath} where user_id=#{user_id}-->
     <!--</update>-->
-
-    <!--<update id="updatetable" parameterType="user">-->
-    <!--update user set name=#{name},loginName=# {loginName},birthDate=#{birthDate},phone=#{phone} where user_id=#{user_id}-->
-    <!--</update>-->
+<!--修改用户-->
+    <update id="updatetable" parameterType="user">
+    update user set userName=#{userName},password=#{password},userEmail=#{userEmail},userSex=#{userSex},userGrade=#{userGrade},userStatus=#{userStatus},userDesc=#{userDesc} where id=#{id}
+    </update>
 <!--单个删除-->
     <delete id="deleteUserByid" parameterType="java.lang.Integer">
     delete from user where id=#{id}

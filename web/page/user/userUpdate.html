@@ -17,25 +17,26 @@
 	<div class="layui-form-item layui-row layui-col-xs12">
 		<label class="layui-form-label">登录名</label>
 		<div class="layui-input-block">
-			<input type="text" class="layui-input userName" lay-verify="required" name="userName" placeholder="请输入登录名">
+			<input type="text" class="layui-input userName" lay-verify="required" id="userName" name="userName" placeholder="请输入登录名">
 		</div>
 	</div>
 
 	<div class="layui-form-item layui-row layui-col-xs12">
 		<label class="layui-form-label" >密码</label>
 		<div class="layui-input-block" >
-			<input type="text" class="layui-input password" lay-verify="required" name="password" placeholder="请输入用户密码">
+			<input type="text" class="layui-input password" lay-verify="password" id="password" name="password" placeholder="请输入用户密码">
+	</div>
 	</div>
 	<div class="layui-form-item layui-row layui-col-xs12">
 		<label class="layui-form-label">邮箱</label>
 		<div class="layui-input-block">
-			<input type="text" class="layui-input userEmail" lay-verify="email" name="userEmail" placeholder="请输入邮箱">
+			<input type="text" class="layui-input userEmail" lay-verify="email" id="userEmail" name="userEmail" placeholder="请输入邮箱">
 		</div>
 	</div>
 	<div class="layui-row">
 		<div class="magb15 layui-col-md4 layui-col-xs12">
 			<label class="layui-form-label">性别</label>
-			<div class="layui-input-block userSex">
+			<div class="layui-input-block userSex" id="userSex">
 				<input type="radio" name="userSex" value="男" title="男" checked>
 				<input type="radio" name="userSex" value="女" title="女">
 				<input type="radio" name="userSex" value="保密" title="保密">
@@ -44,7 +45,7 @@
 		<div class="magb15 layui-col-md4 layui-col-xs12">
 			<label class="layui-form-label">用户等级</label>
 			<div class="layui-input-block">
-				<select name="userGrade" class="userGrade" lay-filter="userGrade">
+				<select name="userGrade" class="userGrade" lay-filter="userGrade" id="userGrade">
 					<option value="1">教师</option>
 					<option value="2">学生</option>
 					<option value="3">管理员</option>
@@ -54,7 +55,7 @@
 		<div class="magb15 layui-col-md4 layui-col-xs12">
 			<label class="layui-form-label">会员状态</label>
 			<div class="layui-input-block">
-				<select name="userStatus" class="userStatus" lay-filter="userStatus">
+				<select name="userStatus" class="userStatus" lay-filter="userStatus" id="userStatus">
 					<option value="1">正常使用</option>
 					<option value="2">限制用户</option>
 				</select>
@@ -64,14 +65,21 @@
 	<div class="layui-form-item layui-row layui-col-xs12">
 		<label class="layui-form-label" >用户简介</label>
 		<div class="layui-input-block" >
-			<textarea placeholder="请输入用户简介" name="userDesc" class="layui-textarea userDesc"></textarea>
+			<textarea placeholder="请输入用户简介" name="userDesc" id="userDesc" class="layui-textarea userDesc"></textarea>
 		</div>
 	</div>
 
+	<!--<div class="layui-upload">-->
+		<!--<button type="button" class="layui-btn" id="test1" >上传图片</button>-->
+		<!--<div class="layui-upload-list">-->
+			<!--<img class="layui-upload-img" id="picture" name="demo1" src="/pic/" style="width:100px; height:100px" />-->
+			<!--<p id="demoText"></p>-->
+		<!--</div>-->
+	<!--</div>-->
 
 	<div class="layui-form-item layui-row layui-col-xs12">
 		<div class="layui-input-block">
-			<button class="layui-btn layui-btn-sm" lay-submit="" lay-filter="addUser">立即添加</button>
+			<button class="layui-btn layui-btn-sm" lay-submit="" lay-filter="UpdateUser">立即添加</button>
 
 			<button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">取消</button>
 		</div>
